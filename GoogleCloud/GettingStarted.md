@@ -189,6 +189,7 @@ The application Client ID and Client Secret are set in this file. They are imple
 const CLIENT_ID = "GOOGLE_CLIENT_ID";
 const CLIENT_SECRET = "GOOGLE_CLIENT_SECRET";
 ```
+(The committed app uses a pair of encrypt/decrypt functions provided by the `timecard` host to mildly obfuscate the `CLIENT_SECRET`. This is not necessary during development.)
 
 While developing, you should replace those strings with your actual Client ID and Client Secret, as noted above. (Directly or via a manifest config, etc.)
 
