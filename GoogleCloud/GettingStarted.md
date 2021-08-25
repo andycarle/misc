@@ -182,6 +182,16 @@ In the `timecard` app's `google-sheets-mod`, OAuth credential management is prov
 import GoogleOAuth from "oAuthManager";
 ```
 
+**oAuthManager.js requires two small changes to use.**
+The application Client ID and Client Secret are set in this file. They are implemented as constants, to facilitate setting them from the Moddable Store:
+
+```javascript
+const CLIENT_ID = "GOOGLE_CLIENT_ID";
+const CLIENT_SECRET = "GOOGLE_CLIENT_SECRET";
+```
+
+While developing, you should replace those strings with your actual Client ID and Client Secret, as noted above. (Directly or via a manifest config, etc.)
+
 #### Constructing a `GoogleOAuth` Instance
 
 The `GoogleOAuth` constructor takes a single options object argument. The constructor expects the following properties on that object (all required):
